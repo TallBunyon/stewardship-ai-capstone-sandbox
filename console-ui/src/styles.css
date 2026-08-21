@@ -1,0 +1,50 @@
+/* Plain starter styling. Restyle freely — this is your canvas. */
+:root {
+  --bg: #0f1417;
+  --panel: #182026;
+  --ink: #e7edf0;
+  --muted: #9fb0ba;
+  --line: #2a353d;
+  --teal: #2dd4bf;
+  --info: #6b7d88;
+  --watch: #d4a72d;
+  --concern: #e0574b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.page { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+.page__header { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.page__header h1 { margin: 0; font-size: 1.5rem; }
+.page__subtitle { margin: .25rem 0 0; color: var(--muted); }
+.page__footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+
+.console__meta { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.tag { background: var(--panel); border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: .15rem .6rem; font-size: .78rem; }
+
+h2 { font-size: 1rem; margin: 1.75rem 0 .6rem; color: var(--teal); }
+.console__summary { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1rem; margin: 0; }
+.muted { color: var(--muted); }
+
+.observations, .integrity, .sources { list-style: none; margin: 0; padding: 0; }
+.observation { display: flex; gap: .75rem; align-items: flex-start; background: var(--panel); border: 1px solid var(--line); border-left-width: 3px; border-radius: 8px; padding: .75rem .9rem; margin-bottom: .5rem; }
+.observation--info { border-left-color: var(--info); }
+.observation--watch { border-left-color: var(--watch); }
+.observation--concern { border-left-color: var(--concern); }
+.observation__statement { margin: 0 0 .2rem; font-weight: 600; }
+.observation__evidence { margin: 0; color: var(--muted); font-size: .85rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.badge { flex: none; text-transform: uppercase; font-size: .68rem; letter-spacing: .04em; font-weight: 700; padding: .2rem .45rem; border-radius: 4px; color: #0f1417; }
+.badge--info { background: var(--info); color: var(--ink); }
+.badge--watch { background: var(--watch); }
+.badge--concern { background: var(--concern); }
+
+.integrity li { background: rgba(224, 87, 75, .08); border: 1px solid rgba(224, 87, 75, .3); border-radius: 8px; padding: .6rem .8rem; margin-bottom: .4rem; color: #f0c9c4; font-size: .9rem; }
+.sources li { color: var(--muted); }

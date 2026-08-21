@@ -1,0 +1,2 @@
+# The sandbox engine mock uses only the Python standard library — nothing to install.
+# (This file is intentionally empty. Test dependencies live in requirements-dev.txt.)

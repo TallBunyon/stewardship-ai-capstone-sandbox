@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Vite
+console-ui/node_modules/
+console-ui/dist/
+console-ui/.vite/
+
+# Env / secrets — never commit
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db

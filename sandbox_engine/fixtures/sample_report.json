@@ -1,0 +1,16 @@
+{
+  "source": "sandbox-mock",
+  "dataset_filename": "sample_sensor_stream.csv",
+  "summary_text": "Sandbox mock read of sample_sensor_stream.csv: 20 row(s), 8 column(s). Numeric parameters examined: dissolved_oxygen_mgl, water_temp_c, pH, turbidity_ntu, conductivity_uscm, depth_m. 1 observation(s) generated. See integrity notes for limits.",
+  "observations": [
+    {
+      "severity": "concern",
+      "statement": "Low dissolved oxygen present in this dataset.",
+      "evidence": "min dissolved_oxygen_mgl = 1.4 mg/L (at or below 4.0 mg/L)."
+    }
+  ],
+  "sources_consulted": [],
+  "integrity_notes": [
+    "Output produced by the SANDBOX MOCK (transparent if/else rules), not by a trained model or the real Stewardship AI engine. Do not treat as scientific fact."
+  ]
+}
