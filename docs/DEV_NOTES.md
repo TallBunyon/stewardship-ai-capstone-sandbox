@@ -14,11 +14,11 @@ Newest entry first.
 
 ## 2026-09-18 — Structure-aware reading + a stronger honesty layer
 
-We put the engine through a real dataset this week: a live water-quality profile
-from a research partner (Dr. Flinn, Murray State) — a multi-depth cast from a flooded
-quarry. Fixing what it got wrong produced a batch of changes that sit right on top of
-the two contract functions you already build against. Here is what changed and why,
-and how each piece maps to a shape you already have.
+We put the engine through a real dataset this week: a live multi-depth water-quality
+profile from a deep, stratified basin. Fixing what it got wrong produced a batch of
+changes that sit right on top of the two contract functions you already build
+against. Here is what changed and why, and how each piece maps to a shape you already
+have.
 
 ### 1. `read_dataset` now detects *structure*, not just columns
 
@@ -57,7 +57,7 @@ the reader.
 
 ### 2. Stratification typing: thermocline vs. chemocline (and the meromixis question)
 
-Dr. Flinn's key scientific note: this quarry is likely stratified by **dissolved
+The key scientific point on this basin: it is likely stratified by **dissolved
 solids**, not just temperature — a **chemocline**, which can make a basin
 *meromictic* (permanently stratified, never fully mixing) rather than a normal lake
 that turns over every fall. These are different systems with different stewardship
@@ -82,9 +82,10 @@ examples now enforced:
   chlorophyll columns (all blank). The engine must *not* diagnose nutrient enrichment
   or blame the low-oxygen bottom water on "nutrient loading." It explains the anoxia
   by physics and basin shape instead, and marks trophic state **"not assessable from
-  this dataset."** (Contrast: a *different* dataset in the same area — Lake Barkley —
-  **does** carry phosphorus and chlorophyll-a, so there eutrophication is a supported
-  read. Same engine, opposite call, driven entirely by what the data contains.)
+  this dataset."** (Contrast: a *different*, public dataset — Lake Barkley monitoring
+  data — **does** carry phosphorus and chlorophyll-a, so there eutrophication is a
+  supported read. Same engine, opposite call, driven entirely by what the data
+  contains.)
 - **A real gradient is not an outlier.** A monotonic rise in specific conductance
   toward the bottom is the chemocline — real vertical structure — not a sensor spike.
   An earlier version flagged the deepest, highest reading as a "MAD spike"; that is a
