@@ -20,7 +20,8 @@ the private engine to do a full, excellent capstone.
 
 1. **`CONTRACT.md`** — the whole interface: two functions, three shapes. Read it first.
 2. **`docs/TRACKS.md`** — the three projects (Console UI, public-data harness, offline app).
-3. Run the example and the tests (below).
+3. **`docs/DEV_NOTES.md`** — notes from the production engine team on what the real engine is doing inside those two functions. Optional, but useful context.
+4. Run the example and the tests (below).
 
 ## Setup (fully local — no API key, no cost)
 
